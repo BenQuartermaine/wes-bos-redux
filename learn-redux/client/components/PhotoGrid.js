@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Post from './Post';
 import Photo from './Photo';
 
 class PhotoGrid extends React.Component {
