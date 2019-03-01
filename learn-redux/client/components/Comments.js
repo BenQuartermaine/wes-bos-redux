@@ -17,6 +17,10 @@ class Comment extends React.Component {
       {
         this.props.comments.map(this.renderComments)
       }
+        <form className="comment-form" action="submit">
+          <input  type="textarea" placeholder="author" />
+          <input className="comment-form" type="textarea" placeholder="comment" />
+        </form>
       </div>
     )
   }

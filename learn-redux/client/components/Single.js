@@ -5,9 +5,7 @@ import Comments from './Comments';
 class Single extends React.Component {
   render() {
     const index = this.props.posts.findIndex(post => post.code === this.props.params.postId);
-    console.log(index);
     const post = this.props.posts[index];
-    console.log();
     
     return (
       <div className="single-photo">
@@ -19,6 +17,10 @@ class Single extends React.Component {
           increment={this.props.increment}
         />
         <Comments comments={this.props.comments[post.code]}/>
+        <form action="submit">
+          <input className="comment-form" type="textarea" placeholder="author" />
+          <input className="comment-form" type="textarea" placeholder="comment" />
+        </form>
       </div>
     )
   }
