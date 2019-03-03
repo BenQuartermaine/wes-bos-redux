@@ -3,8 +3,6 @@ import Photo from './Photo';
 import Comments from './Comments';
 
 class Single extends React.Component {
-
-
   render() {
     const index = this.props.posts.findIndex(post => post.code === this.props.params.postId);
     const post = this.props.posts[index];
@@ -19,7 +17,9 @@ class Single extends React.Component {
           increment={this.props.increment}
         />
         <Comments 
+          code={post.code}
           addComment={this.props.addComment}
+          deleteComment={this.props.deleteComment}
           comments={this.props.comments[post.code]}
         />
       </div>
