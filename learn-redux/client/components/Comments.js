@@ -1,15 +1,17 @@
 import React from 'react';
-// import { addComment } from '../actions/actionCreators';
+import { addComment, deleteComment } from '../actions/actionCreators';
 
 class Comments extends React.Component {
   renderComments(comment, i) {
-   return <div>
-      <p onClick={console.log('working')} className="comment" key={i}>
-        <strong>{comment.user}</strong>
-        {comment.text}
-        <span className="remove-comment"> &times;</span>
-      </p>
-    </div>
+   return (
+    <div className="comment" key={i}>
+         <p>
+           <strong>{comment.user}</strong>
+           {comment.text}
+           <button className="remove-comment"> &times;</button>
+         </p>
+       </div>
+    )
   };
 
   handleSubmit(event) {

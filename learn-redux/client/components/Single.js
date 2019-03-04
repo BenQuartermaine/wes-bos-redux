@@ -17,6 +17,7 @@ class Single extends React.Component {
           increment={this.props.increment}
         />
         <Comments 
+          {...this.props}
           code={post.code}
           addComment={this.props.addComment}
           deleteComment={this.props.deleteComment}
