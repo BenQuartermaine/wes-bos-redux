@@ -6,7 +6,11 @@ function postComments(state, action) {
         user: action.author
       }];
     case 'DELETE_COMMENT':
-      console.log('removing a comment');
+      const i = action.index
+      return [
+        ...state.slice(0, i),
+        ...state.slice(i + 1)
+      ];
     default:
       return state;
   }

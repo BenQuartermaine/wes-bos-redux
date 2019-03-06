@@ -13,6 +13,12 @@ import store, { history } from './store';
 
 const root = document.getElementById('root');
 
+// import ExampleBoundary from './data/config';
+
+// Sentry.init({
+//  dsn: "https://ac0ca6e4586340909b4c71d211036b6f@sentry.io/1407973"
+// });
+
 const router = (
   <Provider store={store}>
     <Router history={browserHistory}>
